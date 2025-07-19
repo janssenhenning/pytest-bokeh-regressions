@@ -39,6 +39,7 @@ pre-commit = [
     ]
 testing = [
     'bokeh',
+    'pytest-cov'
 ]
 
 [project.urls]
