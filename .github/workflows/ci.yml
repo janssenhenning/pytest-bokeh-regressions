@@ -1,0 +1,69 @@
+name: continuous-integration
+
+on: [push, pull_request, workflow_dispatch, workflow_call]
+
+jobs:
+
+  linting:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: ["3.10"]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Cache python dependencies
+      id: cache-pip
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: pip-linting-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: |
+          pip-linting
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip install -e .[pre-commit,testing]
+    - name: Run pre-commit
+      run: |
+        pre-commit run --all-files || (git status --short; git diff ; exit 1)
+
+  tests:
+
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.8","3.9","3.10","3.11", "3.12"]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Cache python dependencies
+      id: cache-pip
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: pip-${{ matrix.python-version }}-tests-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: |
+          pip-${{ matrix.python-version }}-tests
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip install -e .[testing]
+    - name: pytest
+      run: |
+        pytest
+    - name: Upload to Codecov
+      uses: codecov/codecov-action@v3
