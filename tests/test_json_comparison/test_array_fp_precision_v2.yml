@@ -1,0 +1,96 @@
+roots:
+  references:
+  - type: AllLabels
+  - type: AllLabels
+  - type: BasicTickFormatter
+  - type: BasicTickFormatter
+  - type: BasicTicker
+  - type: BasicTicker
+  - attributes:
+      bottom_units: screen
+      fill_alpha: 0.5
+      fill_color: lightgrey
+      left_units: screen
+      level: overlay
+      line_alpha: 1.0
+      line_color: black
+      line_dash:
+      - 4
+      - 4
+      line_width: 2
+      right_units: screen
+      syncable: false
+      top_units: screen
+    type: BoxAnnotation
+  - type: BoxZoomTool
+  - type: CDSView
+  - attributes:
+      data:
+        x:
+          __ndarray__: AAAAAAAA8L9cj8L1KFzvv7gehetRuO6/FK5H4XoU7r9xPQrXo3Dtv83MzMzMzOy/KVyPwvUo7L+F61G4HoXrv+F6FK5H4eq/PQrXo3A96r+amZmZmZnpv/YoXI/C9ei/UrgehetR6L+uR+F6FK7nvwrXo3A9Cue/ZmZmZmZm5r/D9Shcj8Llvx+F61G4HuW/exSuR+F65L/Xo3A9CtfjvzMzMzMzM+O/j8L1KFyP4r/sUbgehevhv0jhehSuR+G/pHA9Ctej4L9cj8L1KFzfvxSuR+F6FN6/zczMzMzM3L+F61G4HoXbvz0K16NwPdq/9ihcj8L12L+uR+F6FK7Xv2ZmZmZmZta/H4XrUbge1b/Xo3A9CtfTv4/C9Shcj9K/SOF6FK5H0b8AAAAAAADQv3E9CtejcM2/4XoUrkfhyr9SuB6F61HIv8P1KFyPwsW/MzMzMzMzw7+kcD0K16PAvylcj8L1KLy/CtejcD0Kt7/sUbgeheuxv5qZmZmZmam/uB6F61G4nr97FK5H4XqEv3sUrkfheoQ/uB6F61G4nj+amZmZmZmpP+xRuB6F67E/CtejcD0Ktz8pXI/C9Si8P6RwPQrXo8A/MzMzMzMzwz/D9Shcj8LFP1K4HoXrUcg/4XoUrkfhyj9xPQrXo3DNPwAAAAAAANA/SOF6FK5H0T+PwvUoXI/SP9ejcD0K19M/H4XrUbge1T9mZmZmZmbWP65H4XoUrtc/9ihcj8L12D89CtejcD3aP4XrUbgehds/zczMzMzM3D8UrkfhehTeP1yPwvUoXN8/pHA9Ctej4D9I4XoUrkfhP+xRuB6F6+E/j8L1KFyP4j8zMzMzMzPjP9ejcD0K1+M/exSuR+F65D8fhetRuB7lP8P1KFyPwuU/ZmZmZmZm5j8K16NwPQrnP65H4XoUruc/UrgehetR6D/2KFyPwvXoP5qZmZmZmek/PQrXo3A96j/hehSuR+HqP4XrUbgehes/KVyPwvUo7D/NzMzMzMzsP3E9CtejcO0/FK5H4XoU7j+4HoXrUbjuP1yPwvUoXO8/AAAAAAAA8D8=
+          dtype: float64
+          order: little
+          shape:
+          - 100
+        y:
+          __ndarray__: AAAAAAAA8D+4HoXrUbjuP3E9CtejcO0/KVyPwvUo7D/hehSuR+HqP+xRuB6F6+k/pHA9Ctej6D+uR+F6FK7nP2ZmZmZmZuY/cT0K16Nw5T97FK5H4XrkPzMzMzMzM+M/PQrXo3A94j9I4XoUrkfhP1K4HoXrUeA/XI/C9Shc3z9xPQrXo3DdP4XrUbgehds/mpmZmZmZ2T9SuB6F61HYPwrXo3A9Ctc/H4XrUbge1T/Xo3A9CtfTP4/C9Shcj9I/SOF6FK5H0T+4HoXrUbjOP3E9CtejcM0/4XoUrkfhyj9SuB6F61HIP8P1KFyPwsU/exSuR+F6xD/sUbgehevBP7gehetRuL4/KVyPwvUovD+amZmZmZm5PwrXo3A9Crc/7FG4HoXrsT+4HoXrUbiuP5qZmZmZmak/exSuR+F6pD97FK5H4XqkP7gehetRuJ4/exSuR+F6lD97FK5H4XqUP3sUrkfheoQ/exSuR+F6hD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAexSuR+F6hD97FK5H4XqEP3sUrkfhepQ/exSuR+F6lD+4HoXrUbieP3sUrkfheqQ/exSuR+F6pD+amZmZmZmpP7gehetRuK4/7FG4HoXrsT8K16NwPQq3P5qZmZmZmbk/KVyPwvUovD+4HoXrUbi+P+xRuB6F68E/exSuR+F6xD/D9Shcj8LFP1K4HoXrUcg/4XoUrkfhyj9xPQrXo3DNP7gehetRuM4/SOF6FK5H0T+PwvUoXI/SP9ejcD0K19M/H4XrUbge1T8K16NwPQrXP1K4HoXrUdg/mpmZmZmZ2T+F61G4HoXbP3E9CtejcN0/XI/C9Shc3z9SuB6F61HgP0jhehSuR+E/PQrXo3A94j8zMzMzMzPjP3sUrkfheuQ/cT0K16Nw5T9mZmZmZmbmP65H4XoUruc/pHA9Ctej6D/sUbgehevpP+F6FK5H4eo/KVyPwvUo7D9xPQrXo3DtP7gehetRuO4/AAAAAAAA8D8=
+          dtype: float64
+          order: little
+          shape:
+          - 100
+    type: ColumnDataSource
+  - type: DataRange1d
+  - type: DataRange1d
+  - type: GlyphRenderer
+  - type: Grid
+  - attributes:
+      dimension: 1
+    type: Grid
+  - type: HelpTool
+  - attributes:
+      line_alpha: 0.1
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      line_alpha: 0.2
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      axis_label: x
+    type: LinearAxis
+  - attributes:
+      axis_label: y
+    type: LinearAxis
+  - type: LinearScale
+  - type: LinearScale
+  - type: PanTool
+  - subtype: Figure
+    type: Plot
+  - type: ResetTool
+  - type: SaveTool
+  - type: Selection
+  - attributes:
+      text: Parabola
+    type: Title
+  - type: Toolbar
+  - type: UnionRenderers
+  - type: WheelZoomTool
+title: Bokeh Application

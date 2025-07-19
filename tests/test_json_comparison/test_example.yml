@@ -1,0 +1,201 @@
+attributes:
+  below:
+  - attributes:
+      axis_label: x
+      formatter:
+        name: BasicTickFormatter
+        type: object
+      major_label_policy:
+        name: AllLabels
+        type: object
+      ticker:
+        attributes:
+          mantissas:
+          - 1
+          - 2
+          - 5
+        name: BasicTicker
+        type: object
+    name: LinearAxis
+    type: object
+  center:
+  - name: Grid
+    type: object
+  - attributes:
+      dimension: 1
+    name: Grid
+    type: object
+  left:
+  - attributes:
+      axis_label: y
+      formatter:
+        name: BasicTickFormatter
+        type: object
+      major_label_policy:
+        name: AllLabels
+        type: object
+      ticker:
+        attributes:
+          mantissas:
+          - 1
+          - 2
+          - 5
+        name: BasicTicker
+        type: object
+    name: LinearAxis
+    type: object
+  renderers:
+  - attributes:
+      data_source:
+        attributes:
+          data:
+            entries:
+            - - x
+              - - 1
+                - 3
+                - 6
+                - 4
+                - 9
+            - - y
+              - - 0
+                - 2
+                - 7
+                - 5
+                - 3
+            type: map
+          selected:
+            name: Selection
+            type: object
+          selection_policy:
+            name: UnionRenderers
+            type: object
+        name: ColumnDataSource
+        type: object
+      glyph:
+        attributes:
+          line_color: '#1f77b4'
+          line_width: 2
+          x:
+            field: x
+            type: field
+          y:
+            field: y
+            type: field
+        name: Line
+        type: object
+      muted_glyph:
+        attributes:
+          line_alpha: 0.2
+          line_color: '#1f77b4'
+          line_width: 2
+          x:
+            field: x
+            type: field
+          y:
+            field: y
+            type: field
+        name: Line
+        type: object
+      nonselection_glyph:
+        attributes:
+          line_alpha: 0.1
+          line_color: '#1f77b4'
+          line_width: 2
+          x:
+            field: x
+            type: field
+          y:
+            field: y
+            type: field
+        name: Line
+        type: object
+      view:
+        attributes:
+          filter:
+            name: AllIndices
+            type: object
+        name: CDSView
+        type: object
+    name: GlyphRenderer
+    type: object
+  title:
+    attributes:
+      text: Minimal Example
+    name: Title
+    type: object
+  toolbar:
+    attributes:
+      tools:
+      - name: PanTool
+        type: object
+      - attributes:
+          renderers: auto
+        name: WheelZoomTool
+        type: object
+      - attributes:
+          dimensions: both
+          overlay:
+            attributes:
+              bottom:
+                type: number
+                value: nan
+              bottom_units: canvas
+              fill_alpha: 0.5
+              fill_color: lightgrey
+              handles:
+                attributes:
+                  all:
+                    attributes:
+                      fill_color: white
+                      hover_fill_color: lightgray
+                    name: AreaVisuals
+                    type: object
+                name: BoxInteractionHandles
+                type: object
+              left:
+                type: number
+                value: nan
+              left_units: canvas
+              level: overlay
+              line_alpha: 1.0
+              line_color: black
+              line_dash:
+              - 4
+              - 4
+              line_width: 2
+              right:
+                type: number
+                value: nan
+              right_units: canvas
+              syncable: false
+              top:
+                type: number
+                value: nan
+              top_units: canvas
+              visible: false
+            name: BoxAnnotation
+            type: object
+        name: BoxZoomTool
+        type: object
+      - name: SaveTool
+        type: object
+      - name: ResetTool
+        type: object
+      - name: HelpTool
+        type: object
+    name: Toolbar
+    type: object
+  x_range:
+    name: DataRange1d
+    type: object
+  x_scale:
+    name: LinearScale
+    type: object
+  y_range:
+    name: DataRange1d
+    type: object
+  y_scale:
+    name: LinearScale
+    type: object
+name: Figure
+type: object

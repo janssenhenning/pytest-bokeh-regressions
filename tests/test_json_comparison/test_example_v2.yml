@@ -1,0 +1,96 @@
+roots:
+  references:
+  - type: AllLabels
+  - type: AllLabels
+  - type: BasicTickFormatter
+  - type: BasicTickFormatter
+  - type: BasicTicker
+  - type: BasicTicker
+  - attributes:
+      bottom_units: screen
+      fill_alpha: 0.5
+      fill_color: lightgrey
+      left_units: screen
+      level: overlay
+      line_alpha: 1.0
+      line_color: black
+      line_dash:
+      - 4
+      - 4
+      line_width: 2
+      right_units: screen
+      syncable: false
+      top_units: screen
+    type: BoxAnnotation
+  - type: BoxZoomTool
+  - type: CDSView
+  - attributes:
+      data:
+        x:
+          __ndarray__: AQAAAAAAAAADAAAAAAAAAAYAAAAAAAAABAAAAAAAAAAJAAAAAAAAAA==
+          dtype: int64
+          order: little
+          shape:
+          - 5
+        y:
+          __ndarray__: AAAAAAAAAAACAAAAAAAAAAcAAAAAAAAABQAAAAAAAAADAAAAAAAAAA==
+          dtype: int64
+          order: little
+          shape:
+          - 5
+    type: ColumnDataSource
+  - type: DataRange1d
+  - type: DataRange1d
+  - type: GlyphRenderer
+  - type: Grid
+  - attributes:
+      dimension: 1
+    type: Grid
+  - type: HelpTool
+  - attributes:
+      line_alpha: 0.1
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      line_alpha: 0.2
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      line_color: '#1f77b4'
+      line_width: 2
+      x:
+        field: x
+      y:
+        field: y
+    type: Line
+  - attributes:
+      axis_label: x
+    type: LinearAxis
+  - attributes:
+      axis_label: y
+    type: LinearAxis
+  - type: LinearScale
+  - type: LinearScale
+  - type: PanTool
+  - subtype: Figure
+    type: Plot
+  - type: ResetTool
+  - type: SaveTool
+  - type: Selection
+  - attributes:
+      text: Minimal Example
+    type: Title
+  - type: Toolbar
+  - type: UnionRenderers
+  - type: WheelZoomTool
+title: Bokeh Application
